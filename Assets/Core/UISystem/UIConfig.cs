@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using System;
 using UnityEngine;
 using Game.SceneManagement;
@@ -19,7 +19,7 @@ namespace Game.UI
         public class UIPanel
         {
             public UIType uiType;
-            public string resourcePath; // Resources¤ºªº¸ô®|
+            public string resourcePath; // Resourceså…§çš„è·¯å¾‘
         }
 
         public List<UIPanel> uiPanels;
@@ -32,14 +32,14 @@ namespace Game.UI
             //Debug.Log(sceneUIConfigs.Count);
             foreach (var sceneUI in sceneUIConfigs)
             {
-                //Debug.Log("¥Ø¼Ğ" + sceneName);
-                //Debug.Log("§ä¨ìªº" + sceneUI.sceneName);
+                //Debug.Log("ç›®æ¨™" + sceneName);
+                //Debug.Log("æ‰¾åˆ°çš„" + sceneUI.sceneName);
                 if (sceneUI.sceneType.ToString() == sceneName)
                 {
                     return sceneUI.startPanels;
                 }
             }
-            return null; // ¦pªG¥¼§ä¨ì¹ïÀ³ªº³õ´º°t¸m¡Aªğ¦^ªÅ
+            return null; // å¦‚æœæœªæ‰¾åˆ°å°æ‡‰çš„å ´æ™¯é…ç½®ï¼Œè¿”å›ç©º
         }
 
         private void OnEnable()

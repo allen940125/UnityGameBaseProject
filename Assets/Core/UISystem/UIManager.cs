@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using Datamanager;
+using Game.SceneManagement;
 using Gamemanager;
 using UnityEngine.SceneManagement; // 用於獲取場景資訊
 
@@ -13,7 +14,7 @@ namespace Game.UI
     /// <summary>
     /// 負責管理所有 UI 面板（HUD、選單、彈窗）的生命週期、顯示狀態和堆疊邏輯。
     /// </summary>
-    public class UIManager
+    public class UIManager : IInitializable, IDataLoadable
     {
         private Transform _uiRoot;
         public Transform UIRoot => _uiRoot;
@@ -61,11 +62,16 @@ namespace Game.UI
             GameManager.Instance.MainGameEvent.SetSubscribe(GameManager.Instance.MainGameEvent.OnSceneLoadedEvent, OnSceneLoadedEvent);
             GameManager.Instance.MainGameEvent.SetSubscribe(GameManager.Instance.MainGameEvent.OnEscapeKeyPressedEvent, OnEscapeKeyPressedEvent);
             GameManager.Instance.MainGameEvent.SetSubscribe(GameManager.Instance.MainGameEvent.OnOpenBackpackKeyPressedEvent, OnOpenBackpackKeyPressedEvent);
-
-            // 啟動時即異步加載並隱藏 HUD
-            LoadInitialPersistentUI().Forget();
         }
 
+        // 新增方法：處理依賴 DataManager 的資產載入
+        public async UniTask LoadDataDependentAssets()
+        {
+            Debug.Log("[UIManager] 資產載入初始化 (依賴 DataManager)...");
+            
+            await LoadInitialPersistentUI();
+        }
+        
         public void Cleanup()
         {
             Debug.Log("[UIManager] 清理...");
@@ -104,46 +110,129 @@ namespace Game.UI
             // 確保 UI 根物件（Canvas）不隨場景切換而銷毀
             GameObject.DontDestroyOnLoad(_uiRoot.gameObject);
         }
+        
+        /// <summary>
+        /// 遊戲啟動時，預加載所有「常駐 UI」並將其設為隱藏
+        /// </summary>
+        private async UniTask LoadInitialPersistentUI()
+        {
+            // 1. 獲取專門定義「常駐 UI」的場景類型
+            SceneType persistentType = SceneType.Persistent; 
+            
+            // 2. 從配置中獲取所有常駐 UI 的列表
+            List<UIType> persistentUiTypes = GameManager.Instance.GameSo.uiConfig.GetUIPanelForScene(persistentType.ToString());
+
+            if (persistentUiTypes == null || persistentUiTypes.Count == 0)
+            {
+                Debug.LogWarning("[UIManager] UIConfig 中沒有定義常駐 UI (Persistent)！");
+                Debug.LogWarning("[UIManager] UIConfig 中沒有定義常駐 UI (Persistent)！");
+                return;
+            }
+            
+            List<UniTask> loadTasks = new List<UniTask>();
+
+            // 3. 遍歷並加載所有常T駐 UI
+            foreach (var uiType in persistentUiTypes)
+            {
+                // 這裡我們需要一個「只加載、不開啟」的通用方法
+                loadTasks.Add(LoadAndInstantiatePanel(uiType, UIGroup.Persistent));
+                Debug.Log($"[UIManager] 預加載並初始化常駐 UI: {uiType}");
+            }
+            
+            // 4. 等待所有加載完成
+            await UniTask.WhenAll(loadTasks);
+            
+            Debug.Log($"[UIManager] 成功預加載 {loadTasks.Count} 個常駐 UI。");
+            
+            // 檢查 _hudPanel 是否在加載過程中被正確賦值
+            if (_hudPanel == null)
+            {
+                Debug.LogError("[UIManager] 常駐 UI 加載完畢，但 _hudPanel 引用為空！請檢查配置！");
+            }
+        }
+
 
         /// <summary>
-        /// 遊戲啟動時，預加載常駐 UI (HUD) 並將其設為隱藏
+        /// (新增輔助方法) 僅加載和實例化 Panel，不進行 Open (不顯示、不入堆疊)
         /// </summary>
-        private async UniTaskVoid LoadInitialPersistentUI()
+        private async UniTask<BasePanel> LoadAndInstantiatePanel(UIType uiType, UIGroup uiGroup)
         {
-            // 假設 UIType.HUDPanel 是你的 HUD
-            var hudPrefab = LoadPanelPrefab(UIType.GameHUD); // 沿用同步加載
-            if (hudPrefab != null)
+            var prefab = LoadPanelPrefab(uiType); 
+            if (prefab == null)
             {
-                var go = GameManager.Instance.InstantiateFromManager(hudPrefab, _uiRoot, false);
-                _hudPanel = go.GetComponent<BasePanel>();
-                
-                // 假設 BasePanel 有 CurrentUIType 屬性
-                // _hudPanel.OpenPanel(UIType.HUDPanel); 
-                _hudPanel.Group = UIGroup.Persistent;
-                
-                // 預設隱藏 HUD，直到進入 GameScene
-                _hudPanel.gameObject.SetActive(false); 
+                Debug.LogError($"[UIManager] 無法加載 Prefab for {uiType}！");
+                return null;
+            }
+
+            var go = GameManager.Instance.InstantiateFromManager(prefab, _uiRoot, false);
+            var panel = go.GetComponent<BasePanel>();
+            if (panel == null)
+            {
+                Debug.LogError($"[UIManager] Prefab {uiType} 上缺少 BasePanel 組件！");
+                UnityEngine.Object.Destroy(go);
+                return null;
+            }
+
+            panel.Group = uiGroup;
+
+            // 核心區別：
+            if (uiGroup == UIGroup.Persistent)
+            {
+                // 如果是常駐 UI，我們需要儲存它的引用 (例如 HUD)
+                // 這裡我們假設 GameHUD 是常駐 UI 的一種
+                if (uiType == UIType.GameHUD) 
+                {
+                    _hudPanel = panel;
+                }
+                // 你可能還需要一個 _persistentPanelDict 來儲存其他的常駐 UI
             }
             else
             {
-                Debug.LogError("[UIManager] 無法加載 HUDPanel Prefab！");
+                // 如果是場景 UI，儲存在主字典中
+                PanelDict[uiType] = panel;
             }
-            await UniTask.Yield(); // 避免警告
+            
+            // 預設隱藏
+            panel.gameObject.SetActive(false); 
+            return panel;
         }
 
         #endregion
 
         #region 事件訂閱與處理
 
-        private void OnSceneLoadedEvent(SceneLoadedEvent cmd)
+        // 修正後的版本
+        private async void OnSceneLoadedEvent(SceneLoadedEvent cmd)
         {
-            // 換場景時，關閉所有「非持久化」的 UI
+            Debug.Log("場景載入完成準備處理UI");
+            // 1. 換場景時，關閉所有「非持久化」的 UI
             CloseAllPanels(); 
 
-            // 根據新場景決定 HUD 狀態
-            string sceneName = SceneManager.GetActiveScene().name;
-            bool shouldShowHUD = !sceneName.Contains("Menu") && !sceneName.Contains("Load");
-            
+            // 2. 從事件參數中獲取強型別的 SceneType (這才是解耦的關鍵！)
+            //    (您必須確保您的 SceneLoader 在發送事件時，把 SceneType 放入 cmd 中)
+            SceneType currentSceneType = cmd.SceneType; 
+
+            // 3. 根據 SceneType 獲取該場景需要「啟動時開啟」的 UI 列表
+            List<UIType> startPanels = GameManager.Instance.GameSo.uiConfig.GetUIPanelForScene(currentSceneType.ToString());
+
+            // 4. (這是您缺失的關鍵邏輯) 遍歷列表，並開啟所有 UI
+            if (startPanels != null && startPanels.Count > 0)
+            {
+                Debug.Log($"[UIManager] 根據配置，為場景 {currentSceneType} 加載 {startPanels.Count} 個 UI...");
+        
+                foreach (var uiType in startPanels)
+                {
+                    // 使用 OpenPanel 來加載、實例化、並正確管理堆疊
+                    // 因為我們在 (async) void 方法中，所以使用 .Forget()
+                    OpenPanel<BasePanel>(uiType).Forget(); 
+                }
+            }
+
+            // 5. 根據「強型別」決定是否顯示 HUD
+            // (我們假設 SceneType 的名稱可以安全地用於此判斷)
+            string sceneNameStr = currentSceneType.ToString();
+            bool shouldShowHUD = !sceneNameStr.Contains("Menu") && !sceneNameStr.Contains("Load");
+    
             if (_hudPanel != null)
             {
                 _hudPanel.gameObject.SetActive(shouldShowHUD);
@@ -151,28 +240,45 @@ namespace Game.UI
         }
 
         /// <summary>
-        /// 核心 ESC 邏輯：
-        /// 1. 如果堆疊 (Stack) 中有 Panel，則關閉最頂層 (Peek) 的那一個。
+        /// 核心邏輯：
+        /// 1. 如果堆疊 (Stack) 中有 Panel，則關閉最頂層 (Peek) 的那一個，但排除特殊 Panel。
         /// 2. 如果堆疊是空的 (我們在 Gameplay 狀態)，才開啟設置選單。
         /// </summary>
         private void OnEscapeKeyPressedEvent(EscapeKeyPressedEvent cmd)
         {
+            // 獲取當前場景資訊
+            var currentScene = SceneManager.GetActiveScene();
+    
             if (_panelStack.Count > 0)
             {
-                // 動作 1：關閉最頂層的 Panel（例如：關閉背包、關閉設定）
                 var topPanel = _panelStack.Peek();
-                
-                // 呼叫 ClosePanel 來安全地關閉並處理堆疊
+
+                // 【關鍵豁免邏輯】:
+                // 檢查 1: 如果當前場景是主菜單場景 (MainMenuScene)
+                // 檢查 2: 且堆疊頂層是 MainMenu 這個特定的 Panel
+                // 則 ESC 鍵不執行關閉操作。
+                if (currentScene.name.Contains("MainMenu") && topPanel.CurrentUIType == UIType.MainMenu)
+                {
+                    Debug.Log("[UIManager] 偵測到 MainMenu 位於堆疊頂層，ESC 鍵操作被豁免。");
+            
+                    // 💡 可以在這裡加入額外邏輯，例如：彈出「確認退出遊戲」的 Popup。
+                    // OpenPanel<ConfirmExitPopup>(UIType.ConfirmExitPopup).Forget();
+            
+                    return; // 終止關閉流程
+                }
+        
+                // 動作 1：關閉最頂層的 Panel（非 MainMenu 或不是在 MainMenu 場景）
                 ClosePanel(topPanel.CurrentUIType); 
             }
             else
             {
                 // 動作 2：堆疊為空，開啟設定
-                // (只有當前沒有任何 UI 視窗時，ESC 才會開啟設定)
-                
-                // 這裡可以加入更多判斷，例如是否在主選單
-                if (SceneManager.GetActiveScene().name.Contains("GameScene"))
+                // 只有當前沒有任何 UI 視窗時，ESC 才會開啟設定。
+        
+                // 只有在 GameScene 才會開啟設定選單，主菜單則豁免
+                if (currentScene.name.Contains("GameScene"))
                 {
+                    // 注意：這裡假設 SettingsWindow 是 Popup 級別，以便能在 Gameplay 中開啟
                     OpenPanel<SettingsWindow>(UIType.SettingsWindow).Forget();
                 }
             }
@@ -194,6 +300,7 @@ namespace Game.UI
         /// </summary>
         public async UniTask<T> OpenPanel<T>(UIType uiType) where T : BasePanel
         {
+            Debug.Log("嘗試打開" + uiType);
             if (PanelDict.ContainsKey(uiType))
             {
                 Debug.LogWarning($"[UIManager] UI {uiType} 已經開啟。");
@@ -202,16 +309,30 @@ namespace Game.UI
 
             var group = GetUIGroup(uiType);
 
-            // --- 核心：單一焦點檢查 ---
-            // Persistent (HUD) 允許同時存在，但 Menu/Popup 只能同時存在一個
-            if (group != UIGroup.Persistent && _panelStack.Count > 0)
+            // --- 核心：模態堆疊檢查 ---
+            if (group != UIGroup.Persistent)
             {
-                // 阻止開啟
-                var topPanelType = _panelStack.Peek().CurrentUIType;
-                Debug.LogWarning($"[UIManager] [單一焦點限制] 無法開啟 {uiType}，因為 {topPanelType} 正在開啟中。請先關閉當前 Panel。");
-                return null;
+                if (_panelStack.Count > 0)
+                {
+                    var topPanel = _panelStack.Peek();
+            
+                    // 邏輯修改：
+                    // 1. 如果頂層 Panel 的 Group 是 Popup，則允許開啟任何新的 Popup
+                    //    -> 允許 Popup 開在 Popup 之上 (例如：提示 -> 確認)
+                    // 2. 如果新開啟的 Panel Group 是 Menu，則阻止開啟。
+                    //    -> 不允許 Menu 開在 Menu/Popup 之上 (例如：背包 -> 設定)
+            
+                    // 檢查：如果**新**開啟的是 `Menu`，且堆疊非空，則阻止。
+                    // 但如果新開啟的是 `Popup`，則允許。
+                    if (group == UIGroup.Menu)
+                    {
+                        var topPanelType = topPanel.CurrentUIType;
+                        Debug.LogWarning($"[UIManager] [模態限制] 無法開啟 {uiType} (Menu)，因為 {topPanelType} 正在開啟中。請先關閉當前 Panel。");
+                        return null;
+                    }
+                }
+                // 如果新開啟的是 Popup，則這裡會允許其繼續執行，並被推入堆疊
             }
-            // -------------------------
 
             // 沿用同步加載 Prefab，但 OpenPanel 保持異步 (為未來動畫或異步加載保留)
             var prefab = LoadPanelPrefab(uiType);
@@ -278,7 +399,7 @@ namespace Game.UI
                 
                 // BasePanel 應該在 ClosePanel 動畫結束後自行 Destroy(gameObject)
                 // 並呼叫 UIManager.RemovePanelReference(this) 來安全移除
-                panel.ClosePanel(); 
+                panel.ExecuteClose(); 
 
                 // 檢查堆疊狀態並切換模式
                 CheckStackTopOnClose();
@@ -334,7 +455,7 @@ namespace Game.UI
                 var panel = _panelStack.Pop();
                 if (panel != null)
                 {
-                    panel.ClosePanel(); // BasePanel 應自行 Destroy
+                    panel.ExecuteClose(); // BasePanel 應自行 Destroy
                 }
             }
 
@@ -357,23 +478,6 @@ namespace Game.UI
             {
                 ClosePanel(_panelStack.Peek().CurrentUIType);
             }
-        }
-
-        /// <summary>
-        /// 供 BasePanel 在 OnDestroy 時呼叫，以安全地從字典中移除引用
-        /// (防止因動畫延遲銷毀導致字典中存在 null)
-        /// </summary>
-        public void RemovePanelReference(BasePanel panel)
-        {
-            if (panel == null) return;
-            
-            if (PanelDict.ContainsKey(panel.CurrentUIType) && PanelDict[panel.CurrentUIType] == panel)
-            {
-                PanelDict.Remove(panel.CurrentUIType);
-            }
-            
-            //ToDO 問題
-            _panelStack.Pop();
         }
 
         #endregion
@@ -562,10 +666,5 @@ namespace Game.UI
         }
 
         #endregion
-        
-        public void Update()
-        {
-
-        }
     }
 }

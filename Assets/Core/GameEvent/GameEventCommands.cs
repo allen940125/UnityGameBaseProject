@@ -1,3 +1,4 @@
+using Game.SceneManagement;
 using UnityEngine;
 
 namespace Gamemanager
@@ -61,7 +62,14 @@ namespace Gamemanager
 
     public class SceneLoadedEvent : GameEventMessageBase
     {
-        
+        // 我們需要一個公共欄位或屬性來攜帶數據
+        public SceneType SceneType { get; private set; }
+
+        // 構造函數：在發送事件時，必須傳入 SceneType
+        public SceneLoadedEvent(SceneType sceneType)
+        {
+            this.SceneType = sceneType;
+        }
     }
     
     // ======================

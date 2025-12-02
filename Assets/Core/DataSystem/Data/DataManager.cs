@@ -11,6 +11,8 @@ namespace Datamanager
 {
     public class DataManager
     {
+        public event System.Action OnDataLoaded;
+        
         public DataGroup DataGroup = new DataGroup();
         public RealTimePlayerData realTimePlayerData = new RealTimePlayerData();
         public async Task InitDataMananger()
@@ -114,6 +116,9 @@ namespace Datamanager
                 {
                     Debug.LogError("❌ DataManager 物品查詢失敗，可能 ID 101 不存在!");
                 }
+                
+                Debug.Log("✅ DataManager 初始化流程全部完成！");
+                OnDataLoaded?.Invoke(); // 發送事件
             }
             catch (Exception ex)
             {

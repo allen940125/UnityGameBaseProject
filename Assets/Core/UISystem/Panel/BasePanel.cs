@@ -33,12 +33,7 @@ namespace Game.UI
 
         protected virtual void OnDestroy()
         {
-            // 當 Panel 被銷毀時，通知 UIManager 清除引用
-            if (GameManager.Instance != null && GameManager.Instance.UIManager != null)
-            {
-                Debug.Log(panelType + "已被銷毀");
-                GameManager.Instance.UIManager.RemovePanelReference(this);
-            }
+            
         }
 
         /// <summary>
@@ -59,23 +54,38 @@ namespace Game.UI
         }
 
         /// <summary>
-        /// 關閉 Panel：
-        /// 1. 設置不顯示
-        /// 2. 執行銷毀（可改為回收）
-        /// 3. 不直接操作 UIManager 的 PanelDict，由 UIManager OnDestroy 處理清除
-        /// 4. 如果沒有 Menu 類型的 UI 開啟，恢復 Gameplay 輸入狀態
+        /// 【防呆設計 - 子類別使用】
+        /// 向 UIManager 發出「關閉請求」。
+        /// UIManager 會檢查堆疊並決定是否關閉。
+        /// 子類別（如 SettingsWindow）的關閉按鈕應該呼叫這個。
         /// </summary>
-        public virtual void ClosePanel()
+        protected void RequestClose()
+        {
+            // 如果 GameManager 或 UIManager 已經被銷毀，
+            // 至少要能把自己銷毀，避免殘留
+            if (GameManager.Instance != null && GameManager.Instance.UIManager != null)
+            {
+                // 透過 UIManager 安全地關閉
+                GameManager.Instance.UIManager.ClosePanel(panelType);
+            }
+            else
+            {
+                Debug.LogWarning($"[BasePanel] UIManager 不存在，強行銷毀 {panelType}");
+                ExecuteClose(); // 緊急備案
+            }
+        }
+
+        /// <summary>
+        /// 【防呆設計 - UIManager 專用】
+        /// 執行真正的關閉和銷毀邏輯。
+        /// 標記為 'internal' 使其只在你的遊戲邏輯內部可見，
+        /// 降低了從外部被誤用的風險。
+        /// </summary>
+        internal virtual void ExecuteClose()
         {
             isRemove = true;
             SetActive(false);
             Destroy(gameObject); // 若未來有面板回收系統，可替換成回收邏輯
-
-            // if (!GameManager.Instance.UIManager.HasOpenUIInGroup(UIGroup.Menu))
-            // {
-            //     Debug.Log("全清除：切回 Gameplay 狀態");
-            //     GameManager.Instance.InputManagers.SetInputActive(InputType.Gameplay);
-            // }
         }
     }
 }

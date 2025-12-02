@@ -1,0 +1,210 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity\\UnityBaseProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|D:\\Unity\\UnityBaseProject\\assets\\core\\uisystem\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\uisystem\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|D:\\Unity\\UnityBaseProject\\assets\\scripts\\ui\\menus\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\menus\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|D:\\Unity\\UnityBaseProject\\assets\\core\\versatiletools\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\versatiletools\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|d:\\unity\\unitybaseproject\\assets\\core\\gameevent\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\gameevent\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|D:\\Unity\\UnityBaseProject\\assets\\core\\datasystem\\data\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\datasystem\\data\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|D:\\Unity\\UnityBaseProject\\assets\\core\\scenesystem\\loadscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\scenesystem\\loadscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|d:\\unity\\unitybaseproject\\assets\\core\\uisystem\\uiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\uisystem\\uiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|d:\\unity\\unitybaseproject\\assets\\core\\bootstrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\bootstrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DEBF79-6B1A-D3E2-1F2B-1FF3175DDD3E}|UniTask.csproj|d:\\unity\\unitybaseproject\\assets\\plugins\\unitask\\runtime\\unitaskscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DEBF79-6B1A-D3E2-1F2B-1FF3175DDD3E}|UniTask.csproj|solutionrelative:assets\\plugins\\unitask\\runtime\\unitaskscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|d:\\unity\\unitybaseproject\\assets\\core\\newmonobehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\newmonobehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|D:\\Unity\\UnityBaseProject\\assets\\core\\uisystem\\panel\\basepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F805DD-F47E-1596-0B74-04D6559CE7C4}|Assembly-CSharp.csproj|solutionrelative:assets\\core\\uisystem\\panel\\basepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\GameEvent\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\GameEvent\\GameManager.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\GameEvent\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Core\\GameEvent\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T07:11:06.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UIConfig.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\UISystem\\UIConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UISystem\\UIConfig.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\UISystem\\UIConfig.cs",
+              "RelativeToolTip": "Assets\\Core\\UISystem\\UIConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T07:02:20.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UniTaskScheduler.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Plugins\\UniTask\\Runtime\\UniTaskScheduler.cs",
+              "RelativeDocumentMoniker": "Assets\\Plugins\\UniTask\\Runtime\\UniTaskScheduler.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Plugins\\UniTask\\Runtime\\UniTaskScheduler.cs",
+              "RelativeToolTip": "Assets\\Plugins\\UniTask\\Runtime\\UniTaskScheduler.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAjwFkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T06:21:09.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NewMonoBehaviourScript.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\NewMonoBehaviourScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\NewMonoBehaviourScript.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\NewMonoBehaviourScript.cs",
+              "RelativeToolTip": "Assets\\Core\\NewMonoBehaviourScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T06:13:01.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Bootstrap.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\Bootstrap.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\Bootstrap.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\Bootstrap.cs",
+              "RelativeToolTip": "Assets\\Core\\Bootstrap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T03:50:11.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Singleton.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\VersatileTools\\Singleton.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\VersatileTools\\Singleton.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\VersatileTools\\Singleton.cs",
+              "RelativeToolTip": "Assets\\Core\\VersatileTools\\Singleton.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T06:09:09.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoadSceneManager.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\SceneSystem\\LoadSceneManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\SceneSystem\\LoadSceneManager.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\SceneSystem\\LoadSceneManager.cs",
+              "RelativeToolTip": "Assets\\Core\\SceneSystem\\LoadSceneManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T04:12:08.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Scripts\\UI\\Menus\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menus\\MainMenu.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Scripts\\UI\\Menus\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Menus\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T04:06:13.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataManager.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\DataSystem\\Data\\DataManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\DataSystem\\Data\\DataManager.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\DataSystem\\Data\\DataManager.cs",
+              "RelativeToolTip": "Assets\\Core\\DataSystem\\Data\\DataManager.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAADwv6MAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T04:05:01.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\UISystem\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UISystem\\UIManager.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\UISystem\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Core\\UISystem\\UIManager.cs",
+              "ViewState": "AgIAAKcBAAAAAAAAAADwv3wCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T03:31:26.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BasePanel.cs",
+              "DocumentMoniker": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\UISystem\\Panel\\BasePanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Core\\UISystem\\Panel\\BasePanel.cs",
+              "ToolTip": "D:\\Unity\\UnityBaseProject\\Assets\\Core\\UISystem\\Panel\\BasePanel.cs",
+              "RelativeToolTip": "Assets\\Core\\UISystem\\Panel\\BasePanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T04:06:20.047Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

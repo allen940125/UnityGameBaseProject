@@ -3,7 +3,7 @@ using Gamemanager;
 
 namespace Game.UI
 {
-    public class TransitionUIManager
+    public class TransitionUIManager : IInitializable
     {
         public void Initialize()
         {

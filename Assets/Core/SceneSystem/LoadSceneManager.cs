@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Gamemanager;
@@ -7,15 +8,22 @@ namespace Game.SceneManagement
 {
     public enum SceneType
     {
+        // --- 預備的遊戲場景 ---
+        InitScene,
+
+        // --- 真實的遊戲場景 ---
         MainMenuScene,
         LoadingScene,
         GameScene,
+    
+        // --- 用於配置查找的「虛擬」場景類型 ---
+        Persistent // 代表「常駐 UI」，例如 HUD
     }
 
     /// <summary>
     /// 負責場景轉換的管理器（建議命名為 SceneTransitionManager）
     /// </summary>
-    public class SceneTransitionManager
+    public class SceneTransitionManager : IInitializable
     {
         /// <summary>
         /// 靜態變數，保存下一個目標場景（供 LoadingScreenController 參考）
@@ -25,18 +33,34 @@ namespace Game.SceneManagement
         public void Initialize()
         {
             // 如果需要監聽 Unity 的場景載入完成事件，可啟用下面這行：
-            // SceneManager.sceneLoaded += HandleSceneLoaded;
+            SceneManager.sceneLoaded += HandleSceneLoaded;
         }
 
         public void Cleanup()
         {
-            // SceneManager.sceneLoaded -= HandleSceneLoaded;
+            SceneManager.sceneLoaded -= HandleSceneLoaded;
         }
 
         // 若需要在場景載入後通知其他系統，可使用此事件處理函數
         private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            GameManager.Instance.MainGameEvent.Send(new SceneLoadedEvent());
+            // 1. 獲取剛載入場景的「字串名稱」
+            string sceneName = scene.name;
+
+            // 2. 將「字串名稱」轉換回「SceneType 枚舉」
+            //    (這是必要的，因為 Unity 的 API 只返回 string)
+            if (Enum.TryParse(sceneName, out SceneType loadedType))
+            {
+                // 3. 創建一個「帶有數據」的事件
+                SceneLoadedEvent eventCmd = new SceneLoadedEvent(loadedType);
+
+                // 4. 發送這個「帶有數據」的事件
+                GameManager.Instance.MainGameEvent.Send(eventCmd);
+            }
+            else
+            {
+                Debug.LogError($"[SceneManager] 場景 {sceneName} 載入成功，但在 SceneType 枚舉中找不到對應值！");
+            }
         }
 
         /// <summary>

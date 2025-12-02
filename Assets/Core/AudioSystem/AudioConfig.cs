@@ -1,4 +1,4 @@
-using Game.SceneManagement;
+using Game.SceneManagement; // å‡è¨­ SceneType åœ¨é€™è£¡å®šç¾©
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,20 +11,21 @@ namespace Game.Audio
         [Serializable]
         public class SceneAudio
         {
-            public SceneType sceneType; // ³õ´º¦WºÙ
-            public List<AudioData> startBGMData;
-            public List<AudioData> startSFXData; // ¸Ó³õ´ºªºªì©l¿é¤J°Ê§@
+            public SceneType sceneType; // å ´æ™¯é¡å‹
+            public List<AudioData> startBGMData; // å ´æ™¯é–‹å§‹æ™‚æ’­æ”¾çš„ BGM
+            public List<AudioData> startSFXData; // å ´æ™¯é–‹å§‹æ™‚æ’­æ”¾çš„ SFX (ç’°å¢ƒéŸ³æˆ–å–®æ¬¡éŸ³æ•ˆ)
         }
 
-        public List<SceneAudio> sceneAudios; // ©Ò¦³³õ´ºªº¿é¤J°t¸m
+        public List<SceneAudio> sceneAudios; // æ‰€æœ‰å ´æ™¯çš„éŸ³é »é…ç½®
 
         /// <summary>
-        /// ®Ú¾Ú·í«e³õ´º¦WºÙÀò¨ú¹ïÀ³ªº¿é¤J°t¸m
+        /// æ ¹æ“šå ´æ™¯åç¨±ç²å–å°æ‡‰çš„éŸ³é »é…ç½®
         /// </summary>
-        /// <param name="sceneName">³õ´º¦WºÙ</param>
-        /// <returns>¸Ó³õ´ºªº¿é¤J°Ê§@¦Cªí</returns>
+        /// <param name="sceneName">ç•¶å‰å ´æ™¯åç¨± (é€šå¸¸æ˜¯ SceneManager.GetActiveScene().name)</param>
+        /// <returns>å ´æ™¯éŸ³é »æ•¸æ“šï¼Œè‹¥ç„¡å‰‡å›å‚³ null</returns>
         public SceneAudio GetAudioDataForScene(string sceneName)
         {
+            // ç”±æ–¼ sceneType æ˜¯ SceneType enumï¼Œæˆ‘å€‘ä½¿ç”¨å®ƒçš„ ToString() èˆ‡ sceneName æ¯”è¼ƒ
             foreach (var sceneAudio in sceneAudios)
             {
                 if (sceneAudio.sceneType.ToString() == sceneName)
@@ -32,8 +33,7 @@ namespace Game.Audio
                     return sceneAudio;
                 }
             }
-            return null; // ¦pªG¥¼§ä¨ì¹ïÀ³ªº³õ´º°t¸m¡Aªğ¦^ªÅ
+            return null;
         }
     }
-
 }
