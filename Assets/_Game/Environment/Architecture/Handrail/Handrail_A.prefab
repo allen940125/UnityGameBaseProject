@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 3650806043475533366}
   - component: {fileID: 1535361924494371580}
   - component: {fileID: 2875875602395988882}
+  - component: {fileID: 5361856802801117314}
   m_Layer: 0
   m_Name: Handrail_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &361870535501173139
 Transform:
@@ -108,3 +109,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0000005, y: 1.1946533, z: 0.28585264}
   m_Center: {x: 1.0000002, y: 0.59732664, z: -0.00000041723263}
+--- !u!114 &5361856802801117314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030849296276785961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8e930ea1f7a254eb0ac31463bdfcbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
