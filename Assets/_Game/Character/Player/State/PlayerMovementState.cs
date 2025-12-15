@@ -60,7 +60,7 @@ namespace GameFramework.Actors
         
         protected void Move()
         {
-            if (StateContext.ReusableData.MovementInput == Vector2.zero || StateContext.ReusableData.MovementSpeedModifier == 0f || !StateContext.ReusableData.CanMove)
+            if (StateContext.ReusableData.MovementInput == Vector2.zero || StateContext.ReusableData.FinalMoveSpeedModifier == 0f || !StateContext.ReusableData.CanMove)
             {
                 return;
             }
@@ -87,7 +87,7 @@ namespace GameFramework.Actors
         /// <returns></returns>
         protected float GetMovementSpeed(bool shouldConsiderSlopes = true)
         {
-            float movementSpeed = StateContext.Data.GroundedData.BaseSpeed * StateContext.ReusableData.MovementSpeedModifier;
+            float movementSpeed = StateContext.Data.GroundedData.BaseSpeed * StateContext.ReusableData.FinalMoveSpeedModifier;
             
             if (shouldConsiderSlopes)
             {

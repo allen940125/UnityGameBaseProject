@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7733e05664098504c8f7d8d2a80399a8, type: 3}
+  m_Name: "Player_\u8FD1\u6230"
+  m_EditorClassIdentifier: 
+  WeaponName: "\u8FD1\u6230"
+  ComboSteps:
+  - AnimationName: Attack_0
+    CrossFadeDuration: 0.1
+    DamageActiveTime: 0
+    DamageEndTime: 0
+    RecoveryTime: 0
+    DamageMultiplier: 1
+    MovementMultiplier: 0
+    RootMotionForce: {x: 0, y: 0, z: 0}
+  - AnimationName: Attack_1
+    CrossFadeDuration: 0.1
+    DamageActiveTime: 0
+    DamageEndTime: 0
+    RecoveryTime: 0
+    DamageMultiplier: 1
+    MovementMultiplier: 0
+    RootMotionForce: {x: 0, y: 0, z: 0}
+  - AnimationName: Attack_2
+    CrossFadeDuration: 0.1
+    DamageActiveTime: 0
+    DamageEndTime: 0
+    RecoveryTime: 0
+    DamageMultiplier: 1
+    MovementMultiplier: 0
+    RootMotionForce: {x: 0, y: 0, z: 0}

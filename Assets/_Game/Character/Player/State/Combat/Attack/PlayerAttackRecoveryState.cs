@@ -9,6 +9,7 @@ namespace GameFramework.Actors
         public override void OnEnter()
         {
             base.OnEnter();
+            StateContext.ReusableData.ComboIndex += 1;
         }
 
         public override void OnLogic()

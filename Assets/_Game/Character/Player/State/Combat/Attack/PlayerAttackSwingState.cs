@@ -9,6 +9,16 @@ namespace GameFramework.Actors
         public override void OnEnter()
         {
             base.OnEnter();
+            StateContext.ReusableData.AttackSwingFinished = false;
+
+            // 1. 開啟傷害判定
+            //StateContext.WeaponController.EnableHitbox();
+
+            // 2. 鎖定移動與旋轉 (這時候不能再轉彎了！)
+            StateContext.ReusableData.ActionMovementMultiplier = 0f;
+
+            // 3. 開啟 Root Motion (讓動畫帶動角色往前踏步)
+            //StateContext.Animator.applyRootMotion = true;
         }
 
         public override void OnLogic()
@@ -26,6 +36,8 @@ namespace GameFramework.Actors
         public override void OnExit()
         {
             base.OnExit();
+            //StateContext.WeaponController.DisableHitbox();
+            //StateContext.Animator.applyRootMotion = false;
         }
     }
 }
