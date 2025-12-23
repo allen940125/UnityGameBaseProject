@@ -21,7 +21,8 @@ MonoBehaviour:
     RecoveryTime: 0
     DamageMultiplier: 1
     MovementMultiplier: 0
-    RootMotionForce: {x: 0, y: 0, z: 0}
+    RotationSpeedMultiplier: 0.3
+    RootMotionForce: {x: 0, y: 0, z: 1}
   - AnimationName: Left Cross Punch
     CrossFadeDuration: 0.1
     DamageActiveTime: 0
@@ -29,7 +30,8 @@ MonoBehaviour:
     RecoveryTime: 0
     DamageMultiplier: 1
     MovementMultiplier: 0
-    RootMotionForce: {x: 0, y: 0, z: 0}
+    RotationSpeedMultiplier: 0.3
+    RootMotionForce: {x: 0, y: 0, z: 2}
   - AnimationName: Chapa Giratoria
     CrossFadeDuration: 0.1
     DamageActiveTime: 0
@@ -37,4 +39,5 @@ MonoBehaviour:
     RecoveryTime: 0
     DamageMultiplier: 1
     MovementMultiplier: 0
-    RootMotionForce: {x: 0, y: 0, z: 0}
+    RotationSpeedMultiplier: 0.3
+    RootMotionForce: {x: 0, y: 0, z: 3}
