@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dd2a6201f04545b5a8b020edcb2690, type: 3}
+  m_Name: ASC_Player
+  m_EditorClassIdentifier: 
+  Description: 
+  AttributeSets:
+  - Character
+  BaseTags:
+  - _name: Faction.Player
+    _hashCode: 1030057057
+    _shortName: Player
+    _ancestorHashCodes: 82bdedf5
+    _ancestorNames:
+    - Faction
+  BaseAbilities:
+  - {fileID: 11400000, guid: aa5b407b4a9060c458fa4b73d7d1d028, type: 2}
+  - {fileID: 11400000, guid: 6896202ca67e62d42a9fd334a19d3084, type: 2}
+  - {fileID: 11400000, guid: 2a7142a14ff640149b7e39065432b646, type: 2}

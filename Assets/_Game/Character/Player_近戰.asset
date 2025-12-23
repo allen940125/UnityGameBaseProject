@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: "\u8FD1\u6230"
   ComboSteps:
-  - AnimationName: Attack_0
+  - AnimationName: Rigth Cross Punch
     CrossFadeDuration: 0.1
     DamageActiveTime: 0
     DamageEndTime: 0
@@ -22,7 +22,7 @@ MonoBehaviour:
     DamageMultiplier: 1
     MovementMultiplier: 0
     RootMotionForce: {x: 0, y: 0, z: 0}
-  - AnimationName: Attack_1
+  - AnimationName: Left Cross Punch
     CrossFadeDuration: 0.1
     DamageActiveTime: 0
     DamageEndTime: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     DamageMultiplier: 1
     MovementMultiplier: 0
     RootMotionForce: {x: 0, y: 0, z: 0}
-  - AnimationName: Attack_2
+  - AnimationName: Chapa Giratoria
     CrossFadeDuration: 0.1
     DamageActiveTime: 0
     DamageEndTime: 0

@@ -19,6 +19,8 @@ namespace GameFramework.Actors
         [Header("數值設定")]
         public float DamageMultiplier = 1.0f; // 這一下的傷害倍率
         public float MovementMultiplier = 0f; // 這一下能不能移動
+        public float RotationSpeedMultiplier = 0.3f;
+        
         public Vector3 RootMotionForce;       // 額外的位移衝量
     }
 }

@@ -12,25 +12,39 @@ namespace GameFramework.Actors
         {
             base.OnEnter();
 
-            // 1. 消耗輸入 (表示系統已響應玩家按鍵)
+            // 1. 消耗輸入 (重要！這樣才不會無限循環)
             StateContext.ReusableData.WantsToAttack = false;
-            StateContext.ReusableData.AttackWindupFinished = false; // 重置旗標
+        
+            // 重置動畫事件旗標
+            StateContext.ReusableData.AttackWindupFinished = false;
+            StateContext.ReusableData.AttackSwingFinished = false;
+            StateContext.ReusableData.AttackComboWindowFinished = false;
 
-            //SetAnimationBool(StateContext.AnimationData.WantsToAttackParameterName, true);
+            // 1. 從 Config 拿資料 (取代原本的字串拼接)
+            int currentIndex = StateContext.ReusableData.ComboIndex;
+            var attackData = StateContext.ReusableData.CurrentWeapon.GetStep(currentIndex);
+            
+            if (attackData != null)
+            {
+                // 播放動畫
+                StateContext.Animator.CrossFade(attackData.AnimationName, attackData.CrossFadeDuration);
+        
+                // 2. 施加微小的突進力 (這就是 RootMotionForce 的作用)
+                // 確保這是在 Windup 剛開始，或者你也可以在 Swing 開始時施加
+                // if (attackData.ForwardForce > 0)
+                // {
+                //     StateContext.ActorController.AddForce(StateContext.Transform.forward * attackData.ForwardForce);
+                // }
+        
+                // 3. 設定當前的傷害倍率給 WeaponController (讓之後打到人時計算用)
+                //StateContext.WeaponController.SetCurrentDamageMultiplier(attackData.DamageMultiplier);
 
-            // 2. 根據 ComboIndex 播放對應動畫
-            // 假設你的動畫名是 "Attack_0", "Attack_1", "Attack_2"
-
-
-            string animName = "Attack_" + StateContext.ReusableData.ComboIndex;
-
-            // 使用 CrossFade 讓動作銜接更滑順 (0.1f 是過渡時間)
-            StateContext.Animator.CrossFade(animName, 0.1f);
-
-            // 3. 減速 (前搖時允許微動，但要很慢)
-            StateContext.ReusableData.ActionMovementMultiplier = 0f;
+                StateContext.ReusableData.CurrentRotationMode = RotationMode.OrientToCursor;
+                StateContext.ReusableData.ActionMovementMultiplier = attackData.MovementMultiplier;
+                StateContext.ReusableData.RotationSpeedMultiplier = attackData.RotationSpeedMultiplier;
+            }
         }
-
+        
         public override void OnLogic()
         {
             base.OnLogic();
@@ -47,6 +61,8 @@ namespace GameFramework.Actors
         {
             base.OnExit();
             SetAnimationBool(StateContext.AnimationData.WantsToAttackParameterName, false);
+            StateContext.ReusableData.CurrentRotationMode = RotationMode.OrientToMovement;
+            StateContext.ReusableData.RotationSpeedMultiplier = 1.0f;
         }
         
         public override void OnAnimationExitEvent()

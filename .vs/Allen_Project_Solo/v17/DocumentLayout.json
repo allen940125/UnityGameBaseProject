@@ -3,11 +3,35 @@
   "WorkspaceRootPath": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\gas\\gasteach\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\gas\\gasteach\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\gas\\gasteach\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\gas\\gasteach\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|d:\\unity\\soloprojectgame\\allen_project_solo\\assets\\gas\\gasteach\\gamerunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\gas\\gasteach\\gamerunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\_game\\character\\player\\data\\runtimeplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\character\\player\\data\\runtimeplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46392BFB-B898-8DC5-90AC-578CB3A7180D}|com.exhard.exgas.runtime.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\gas\\runtime\\ability\\abilitycontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46392BFB-B898-8DC5-90AC-578CB3A7180D}|com.exhard.exgas.runtime.csproj|solutionrelative:assets\\gas\\runtime\\ability\\abilitycontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46392BFB-B898-8DC5-90AC-578CB3A7180D}|com.exhard.exgas.runtime.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\gas\\runtime\\ability\\timelineability\\timelineabilityplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46392BFB-B898-8DC5-90AC-578CB3A7180D}|com.exhard.exgas.runtime.csproj|solutionrelative:assets\\gas\\runtime\\ability\\timelineability\\timelineabilityplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\_game\\character\\player\\state\\combat\\attack\\playerattackwindupstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\character\\player\\state\\combat\\attack\\playerattackwindupstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|d:\\unity\\soloprojectgame\\allen_project_solo\\assets\\_game\\character\\weaponconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\_game\\character\\weaponconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\character\\weaponconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,15 +39,11 @@
       "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\character\\player\\state\\combat\\attack\\playerattackidlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|d:\\unity\\soloprojectgame\\allen_project_solo\\assets\\_game\\character\\player\\data\\runtimeplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\character\\player\\data\\runtimeplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\_game\\character\\player\\state\\combat\\playeridlecombatstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\character\\player\\state\\combat\\playeridlecombatstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|d:\\unity\\soloprojectgame\\allen_project_solo\\assets\\_game\\character\\player\\data\\animations\\playeranimationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\assets\\_game\\character\\player\\data\\animations\\playeranimationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6ED5C15-DB2E-2B3E-3B1A-C9B39AB6B70B}|Assembly-CSharp.csproj|solutionrelative:assets\\_game\\character\\player\\data\\animations\\playeranimationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -74,8 +94,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameRunner.cs",
+              "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\GASTeach\\GameRunner.cs",
+              "RelativeDocumentMoniker": "Assets\\GAS\\GASTeach\\GameRunner.cs",
+              "ToolTip": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\GASTeach\\GameRunner.cs",
+              "RelativeToolTip": "Assets\\GAS\\GASTeach\\GameRunner.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAswD8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T09:22:54.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AbilityContainer.cs",
+              "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\Runtime\\Ability\\AbilityContainer.cs",
+              "RelativeDocumentMoniker": "Assets\\GAS\\Runtime\\Ability\\AbilityContainer.cs",
+              "ToolTip": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\Runtime\\Ability\\AbilityContainer.cs",
+              "RelativeToolTip": "Assets\\GAS\\Runtime\\Ability\\AbilityContainer.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwDsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T09:19:28.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TimelineAbilityPlayer.cs",
+              "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\Runtime\\Ability\\TimelineAbility\\TimelineAbilityPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\GAS\\Runtime\\Ability\\TimelineAbility\\TimelineAbilityPlayer.cs",
+              "ToolTip": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\Runtime\\Ability\\TimelineAbility\\TimelineAbilityPlayer.cs",
+              "RelativeToolTip": "Assets\\GAS\\Runtime\\Ability\\TimelineAbility\\TimelineAbilityPlayer.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAApwIUAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T09:15:25.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\GASTeach\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\GAS\\GASTeach\\Enemy.cs",
+              "ToolTip": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\GASTeach\\Enemy.cs",
+              "RelativeToolTip": "Assets\\GAS\\GASTeach\\Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T09:14:44.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\GASTeach\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\GAS\\GASTeach\\Player.cs",
+              "ToolTip": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\GAS\\GASTeach\\Player.cs",
+              "RelativeToolTip": "Assets\\GAS\\GASTeach\\Player.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAUwIoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T09:12:32.159Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -84,14 +172,14 @@
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\Data\\RuntimePlayerData.cs",
               "ToolTip": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\Data\\RuntimePlayerData.cs",
               "RelativeToolTip": "Assets\\_Game\\Character\\Player\\Data\\RuntimePlayerData.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAASwE8AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAASwE8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-12T05:07:37.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "WeaponConfig.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\WeaponConfig.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\WeaponConfig.cs",
@@ -99,16 +187,11 @@
               "RelativeToolTip": "Assets\\_Game\\Character\\WeaponConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T05:07:21.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-12-12T05:07:21.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "PlayerLandingState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\Airborne\\Land\\PlayerLandingState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\Airborne\\Land\\PlayerLandingState.cs",
@@ -120,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "PlayerIdleCombatState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\Combat\\PlayerIdleCombatState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\Combat\\PlayerIdleCombatState.cs",
@@ -128,12 +211,11 @@
               "RelativeToolTip": "Assets\\_Game\\Character\\Player\\State\\Combat\\PlayerIdleCombatState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T09:29:10.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T09:29:10.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "PlayerAnimationEventTrigger.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\Utilities\\Animations\\PlayerAnimationEventTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\Utilities\\Animations\\PlayerAnimationEventTrigger.cs",
@@ -145,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "PlayerAttackState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackState.cs",
@@ -157,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "PlayerAttackStateMachine.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\StateMachine\\PlayerAttackStateMachine.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\StateMachine\\PlayerAttackStateMachine.cs",
@@ -169,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "PlayerAttackIdleState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackIdleState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackIdleState.cs",
@@ -177,12 +259,11 @@
               "RelativeToolTip": "Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackIdleState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T08:40:46.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T08:40:46.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "PlayerAttackWindupState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackWindupState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackWindupState.cs",
@@ -190,12 +271,11 @@
               "RelativeToolTip": "Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackWindupState.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T08:31:34.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T08:31:34.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "PlayerAttackSwingState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackSwingState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackSwingState.cs",
@@ -207,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "PlayerAttackRecoveryState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackRecoveryState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\Combat\\Attack\\PlayerAttackRecoveryState.cs",
@@ -219,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "CameraCursor.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\Scripts\\Cameras\\CameraCursor.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cameras\\CameraCursor.cs",
@@ -230,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\PlayerController.cs",
@@ -242,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "GameState.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\State\\GameState.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\State\\GameState.cs",
@@ -254,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "PlayerAnimationData.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\_Game\\Character\\Player\\Data\\Animations\\PlayerAnimationData.cs",
               "RelativeDocumentMoniker": "Assets\\_Game\\Character\\Player\\Data\\Animations\\PlayerAnimationData.cs",
@@ -262,12 +342,11 @@
               "RelativeToolTip": "Assets\\_Game\\Character\\Player\\Data\\Animations\\PlayerAnimationData.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAgwA4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T09:29:44.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T09:29:44.212Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "FadeObject.cs",
               "DocumentMoniker": "D:\\Unity\\SoloProjectGame\\Allen_Project_Solo\\Assets\\Scripts\\FadeObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FadeObject.cs",

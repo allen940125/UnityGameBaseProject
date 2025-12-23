@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d763af469c524557946c477b9bea3a46, type: 3}
+  m_Name: Bomb
+  m_EditorClassIdentifier: 
+  Description: 
+  UniqueName: Bomb
+  Cost: {fileID: 0}
+  Cooldown: {fileID: 0}
+  CooldownTime: 0
+  AssetTags:
+  - _name: Ability.Bomb
+    _hashCode: -337865218
+    _shortName: Bomb
+    _ancestorHashCodes: b84ed1e0
+    _ancestorNames:
+    - Ability
+  CancelAbilityTags: []
+  BlockAbilityTags: []
+  ActivationOwnedTags:
+  - _name: Ban.Motion
+    _hashCode: 1305984585
+    _shortName: Motion
+    _ancestorHashCodes: fd947c29
+    _ancestorNames:
+    - Ban
+  ActivationRequiredTags: []
+  ActivationBlockedTags: []
+  manualEndAbility: 0
+  FrameCount: 87
+  DurationalCues:
+  - trackName: "\u7206\u70B8Cue"
+    clipEvents: []
+  - trackName: 
+    clipEvents: []
+  InstantCues:
+  - trackName: "\u7206\u70B8\u7279\u6548"
+    markEvents:
+    - startFrame: 87
+      cues: []
+  ReleaseGameplayEffect:
+  - trackName: "\u7206\u70B8\u50B7\u5BB3"
+    markEvents:
+    - startFrame: 87
+      jsonTargetCatcher:
+        Type: GAS.Runtime.CatchAreaCircle2D
+        Data: '{"Owner":{"instanceID":0},"checkLayer":{"serializedVersion":"2","m_Bits":0},"radius":3.0,"offset":{"x":0.0,"y":0.0},"centerType":0}'
+      gameplayEffectAssets:
+      - {fileID: 11400000, guid: ef53bd9aa7b48c143ac9e4f4fdbaf25d, type: 2}
+  BuffGameplayEffects: []
+  InstantTasks: []
+  OngoingTasks: []

@@ -13,4 +13,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ERROR_DuplicatedAttributeSet: 
-  AttributeSetConfigs: []
+  AttributeSetConfigs:
+  - Name: Character
+    AttributeNames:
+    - HP
+    - MP
+    - STAMINA
+    - ATK
+    - POSTURE
+    - SPEED
+  - Name: Bullet
+    AttributeNames:
+    - ATK
