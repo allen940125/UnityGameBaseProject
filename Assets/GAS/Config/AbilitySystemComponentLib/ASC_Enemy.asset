@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dd2a6201f04545b5a8b020edcb2690, type: 3}
+  m_Name: ASC_Enemy
+  m_EditorClassIdentifier: 
+  Description: 
+  AttributeSets:
+  - Character
+  BaseTags:
+  - _name: Faction.Enemy
+    _hashCode: -1091112840
+    _shortName: Enemy
+    _ancestorHashCodes: 82bdedf5
+    _ancestorNames:
+    - Faction
+  BaseAbilities:
+  - {fileID: 11400000, guid: 117bb6c2ba308d649a2bfca3ce8e3b70, type: 2}
+  - {fileID: 11400000, guid: aa5b407b4a9060c458fa4b73d7d1d028, type: 2}

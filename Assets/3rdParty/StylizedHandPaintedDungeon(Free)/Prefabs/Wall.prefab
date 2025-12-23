@@ -13,13 +13,12 @@ GameObject:
   - component: {fileID: 6741860723492785484}
   - component: {fileID: -7154053367659906456}
   - component: {fileID: 3464081784085606791}
-  - component: {fileID: -3120872116298564556}
   m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4733772755456769034
 Transform:
@@ -122,18 +121,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8e930ea1f7a254eb0ac31463bdfcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3120872116298564556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6229247520373792897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73056b0e8753a894d8cc250e22adfc3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTransparency: 0.2
-  fadeSpeed: 5
-  affectsChildrenRenderers: 1

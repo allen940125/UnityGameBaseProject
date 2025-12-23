@@ -14,21 +14,31 @@ namespace GameFramework.Actors
             AddState("AttackWindup", new PlayerAttackWindupState(context));
             AddState("AttackSwing", new PlayerAttackSwingState(context));
             AddState("AttackRecovery", new PlayerAttackRecoveryState(context));
-            //AddState("AttackComboWait", new PlayerAttackComboWaitState(context));
-            //AddState("AttackEnd", new PlayerAttackEndState(context));
 
             SetStartState("AttackIdleState");
 
-            // 接下來加上轉換邏輯，例如：
-            
-            AddTransition(new Transition<string>("AttackIdleState", "AttackWindup", t => context.ReusableData.WantsToAttack));
-            AddTransition(new Transition<string>("AttackWindup", "AttackSwing", t => context.ReusableData.AttackWindupFinished));
-            AddTransition(new Transition<string>("AttackSwing", "AttackRecovery", t => context.ReusableData.AttackSwingFinished));
-            //AddTransition(new Transition<string>("AttackRecovery", "AttackComboWait", t => context.ReusableData.ComboQueued && context.ComboWindowActive));
-            //AddTransition(new Transition<string>("AttackComboWait", "AttackWindup", t => context.ReusableData.NextComboConfirmed));
-            //AddTransition(new Transition<string>("AttackComboWait", "AttackIdleState", t => context.ComboWaitTimeOver));
-            AddTransition(new Transition<string>("AttackRecovery", "AttackIdleState", t => context.ReusableData.AttackComboWindowFinished));
+            // --- Transition 邏輯修正 ---
 
+            // 1. Idle -> Windup (開始攻擊)
+            AddTransition(new Transition<string>("AttackIdleState", "AttackWindup", 
+                t => context.ReusableData.WantsToAttack));
+
+            // 2. Windup -> Swing (前搖結束 -> 揮刀)
+            AddTransition(new Transition<string>("AttackWindup", "AttackSwing", 
+                t => context.ReusableData.AttackWindupFinished));
+
+            // 3. Swing -> Recovery (揮刀結束 -> 後搖/等待連擊窗口)
+            AddTransition(new Transition<string>("AttackSwing", "AttackRecovery", 
+                t => context.ReusableData.AttackSwingFinished));
+
+            // 4. [關鍵修正] Recovery -> Windup (連擊！如果在後搖期間有輸入，且沒超過最大段數)
+            // 注意：這裡假設你有一個 MaxComboCount 變數
+            AddTransition(new Transition<string>("AttackRecovery", "AttackWindup", 
+                t => context.ReusableData.WantsToAttack && context.ReusableData.ComboIndex < 3)); 
+
+            // 5. Recovery -> Idle (連擊窗口結束，玩家沒按攻擊 -> 回待機)
+            // 只有在 "沒有要攻擊" 或者 "動畫播完" 時才回去
+            AddTransition(new Transition<string>("AttackRecovery", "AttackIdleState", t => context.ReusableData.AttackComboWindowFinished));
         }
 
         public override void OnLogic()

@@ -66,13 +66,12 @@ GameObject:
   - component: {fileID: 7116314708630045766}
   - component: {fileID: -5722868776061543596}
   - component: {fileID: 249760564730098323}
-  - component: {fileID: -5896748752245976456}
   m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5239272197777735519
 Transform:
@@ -176,18 +175,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8e930ea1f7a254eb0ac31463bdfcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5896748752245976456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9100508158649072905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73056b0e8753a894d8cc250e22adfc3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTransparency: 0.2
-  fadeSpeed: 5
-  affectsChildrenRenderers: 1

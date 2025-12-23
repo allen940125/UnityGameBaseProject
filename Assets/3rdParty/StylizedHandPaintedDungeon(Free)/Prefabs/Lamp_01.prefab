@@ -13,13 +13,12 @@ GameObject:
   - component: {fileID: 259128197372272611}
   - component: {fileID: -4126843425766255058}
   - component: {fileID: 7540245481319849748}
-  - component: {fileID: 7945415672759005910}
   m_Layer: 6
   m_Name: Lamp_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1255897618918155557
 Transform:
@@ -122,17 +121,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8e930ea1f7a254eb0ac31463bdfcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7945415672759005910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6023421512005573601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73056b0e8753a894d8cc250e22adfc3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTransparency: 0.2
-  fadeSpeed: 5
