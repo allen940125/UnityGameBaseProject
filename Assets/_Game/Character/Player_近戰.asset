@@ -20,7 +20,7 @@ MonoBehaviour:
     DamageEndTime: 0
     RecoveryTime: 0
     DamageMultiplier: 1
-    MovementMultiplier: 0
+    MovementMultiplier: 1
     RotationSpeedMultiplier: 0.3
     RootMotionForce: {x: 0, y: 0, z: 1}
   - AnimationName: Left Cross Punch
@@ -29,7 +29,7 @@ MonoBehaviour:
     DamageEndTime: 0
     RecoveryTime: 0
     DamageMultiplier: 1
-    MovementMultiplier: 0
+    MovementMultiplier: 1
     RotationSpeedMultiplier: 0.3
     RootMotionForce: {x: 0, y: 0, z: 2}
   - AnimationName: Chapa Giratoria
@@ -38,6 +38,6 @@ MonoBehaviour:
     DamageEndTime: 0
     RecoveryTime: 0
     DamageMultiplier: 1
-    MovementMultiplier: 0
+    MovementMultiplier: 1
     RotationSpeedMultiplier: 0.3
     RootMotionForce: {x: 0, y: 0, z: 3}

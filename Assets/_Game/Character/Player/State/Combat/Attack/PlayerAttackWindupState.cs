@@ -67,9 +67,9 @@ namespace GameFramework.Actors
         
         public override void OnAnimationExitEvent()
         {
-            StateContext.ReusableData.AttackComboWindowFinished = false;
-            StateContext.ReusableData.AttackWindupFinished = false;
-            StateContext.ReusableData.AttackSwingFinished = false;
+            // StateContext.ReusableData.AttackComboWindowFinished = false;
+            // StateContext.ReusableData.AttackWindupFinished = false;
+            // StateContext.ReusableData.AttackSwingFinished = false;
         }
     }
 }

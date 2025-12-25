@@ -41,6 +41,40 @@ namespace GameFramework.Actors
             AddTransition(new Transition<string>("AttackRecovery", "AttackIdleState", t => context.ReusableData.AttackComboWindowFinished));
         }
 
+        // ★ 關鍵修復 1：進入戰鬥模式時，強制清洗所有數據 ★
+        public override void OnEnter()
+        {
+            base.OnEnter(); // 一定要呼叫 base，不然子狀態不會啟動
+
+            ResetCombatFlags();
+            
+            // 重置連段索引
+            _context.ReusableData.ComboIndex = 0;
+            
+            // 確保一進來是可以轉向的 (防止上次異常退出鎖死)
+            _context.ReusableData.RotationSpeedMultiplier = 1f;
+            _context.ReusableData.ActionMovementMultiplier = 1f;
+        }
+
+        // ★ 關鍵修復 2：離開戰鬥模式時，確保數據歸零 ★
+        public override void OnExit()
+        {
+            base.OnExit();
+            ResetCombatFlags();
+            _context.Animator.CrossFade("Null", 0.1f);
+            // 確保一進來是可以轉向的 (防止上次異常退出鎖死)
+            _context.ReusableData.RotationSpeedMultiplier = 1f;
+            _context.ReusableData.ActionMovementMultiplier = 1f;
+        }
+
+        private void ResetCombatFlags()
+        {
+            _context.ReusableData.AttackWindupFinished = false;
+            _context.ReusableData.AttackSwingFinished = false;
+            _context.ReusableData.AttackComboWindowFinished = false;
+            // 這裡不需要 WantsToAttack = false，因為那是輸入訊號，留給 Input 系統決定
+        }
+        
         public override void OnLogic()
         {
             base.OnLogic();
