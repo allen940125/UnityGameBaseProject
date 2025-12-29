@@ -193,7 +193,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCapTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b8e2ae1a202f1864182b3bab1f21ce0b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -225,7 +225,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectionColorTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0aeb2485654bdb248a1e44f55d82fff0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectionCubeTex:
@@ -427,7 +427,7 @@ Material:
     - _IDMaskPrior8: 0
     - _Invisible: 0
     - _LightMaxLimit: 1
-    - _LightMinLimit: 0.05
+    - _LightMinLimit: 0.01
     - _Main2ndDissolveNoiseStrength: 0.1
     - _Main2ndEnableLighting: 1
     - _Main2ndTexAlphaMode: 0
@@ -725,7 +725,7 @@ Material:
     - _OutlineLitColor: {r: 1, g: 0.28235295, b: 0, a: 0.2509804}
     - _OutlineTexHSVG: {r: 0, g: 1, b: 1, a: 2}
     - _OutlineTex_ScrollRotate: {r: 0, g: 0, b: 0, a: 0}
-    - _ReflectionColor: {r: 0.3899364, g: 0.3899364, b: 0.3899364, a: 1}
+    - _ReflectionColor: {r: 1, g: 1, b: 1, a: 0.127}
     - _ReflectionCubeColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.5, g: 0.46249998, b: 0.42499983, a: 1}
     - _RimIndirColor: {r: 0, g: 0, b: 0, a: 1}
