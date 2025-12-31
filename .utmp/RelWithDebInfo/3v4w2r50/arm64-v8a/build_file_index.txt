@@ -1,0 +1,2 @@
+E:\Unity\SoloProjectGame\Allen_Project_Solo\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+E:\Unity\SoloProjectGame\Allen_Project_Solo\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

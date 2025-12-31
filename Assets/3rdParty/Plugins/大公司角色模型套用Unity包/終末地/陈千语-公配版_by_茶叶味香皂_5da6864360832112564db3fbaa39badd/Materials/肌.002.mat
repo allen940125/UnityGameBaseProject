@@ -426,7 +426,7 @@ Material:
     - _IDMaskPrior7: 0
     - _IDMaskPrior8: 0
     - _Invisible: 0
-    - _LightMaxLimit: 1
+    - _LightMaxLimit: 2
     - _LightMinLimit: 0.01
     - _Main2ndDissolveNoiseStrength: 0.1
     - _Main2ndEnableLighting: 1
@@ -582,7 +582,7 @@ Material:
     - _ShadowMaskType: 0
     - _ShadowNormalStrength: 1
     - _ShadowPostAO: 0
-    - _ShadowReceive: 0
+    - _ShadowReceive: 1
     - _ShadowStrength: 0.7
     - _ShadowStrengthMaskLOD: 0
     - _ShiftBackfaceUV: 0
